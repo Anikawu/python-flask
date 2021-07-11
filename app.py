@@ -9,6 +9,23 @@ app = Flask(
     )
 #所有在public 資料夾底下的檔案,都對應到網址路徑/www/檔案名稱
 
+#建立路徑/getSum 對應的處理函式
+#利用要求字串(Query String)提供彈性:/getSum?min=最小數字&max=最大的數字
+
+@app.route("/getSum")
+def getSum(): #1+2+3+...+max
+    maxNumber=request.args.get("max",100)#預設值給100
+    maxNumber=int(maxNumber)
+    minNumber=request.args.get("min",1) #預設值給1
+    minNumber=int(minNumber)
+    print("最小數字",minNumber)
+    print("最大數字",maxNumber)
+    result =0
+    for n in range(minNumber,maxNumber+1):
+        result+=n
+    return "結果:"+str(result)
+
+
 
 
 
