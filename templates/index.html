@@ -6,6 +6,19 @@
 </head>
 <body>
     <h3>網頁主頁</h3>
-    <a href="https://www.google.com/">連結到網頁</a>
+    <form action="/calculate" method="POST">
+       數字<input type="text" name="max"/>
+       <button>計算結果</button>
+    </form>
+    <hr/>
+    <form action="/show">
+        姓名
+        <input type="text" name="n">
+        <button>點擊送出表單</button>
+    </form>
+    <br>
+    <a href="/page">連結到網頁</a> <!--自己的主機可以使用相對路徑-->
+    <br/>
+    <img src="/pic1.png"/>
 </body>
 </html>
