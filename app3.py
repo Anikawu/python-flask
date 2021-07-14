@@ -42,4 +42,4 @@ def calculate():
     return render_template("result.html",data=result)
 
 #啟動網站伺服器,可透過port參數指定埠號
-app.run(port=5000)
+app.run(port=3000)
